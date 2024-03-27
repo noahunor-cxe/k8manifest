@@ -1,17 +1,17 @@
 name: bgdemo
 replicas: 2
 
-# image:  <+artifact.primary.image>
-# dockercfg: ${artifact.source.dockerconfig}
-
-# createNamespace: true
-# namespace: <+serviceVariables.namespace>
-
-image: <+artifact.primary.image>
-dockercfg: <+artifact.primary.imagePullSecrets>
+image:  <+artifact.primary.image>
+dockercfg: ${artifact.source.dockerconfig}
 
 createNamespace: true
-namespace: <+infra.name>
+namespace: <+serviceVariables.namespace>
+
+# image: <+artifact.primary.image>
+# dockercfg: <+artifact.primary.imagePullSecrets>
+
+# createNamespace: true
+# namespace: <+infra.name>
 
 # Service Type allow you to specify what kind of service you want.
 # Possible values for ServiceType are:
