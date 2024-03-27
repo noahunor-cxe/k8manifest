@@ -1,11 +1,11 @@
 name: bluegreendemo
 replicas: 2
 
-image: <+artifact.images>
-dockercfg: <+artifact.imagePullSecrets>
+image: ${artifact.images}
+dockercfg: ${artifact.imagePullSecrets}
 
 createNamespace: true
-namespace: <+infra.namespace>
+namespace: ${infra.namespace}
 
 # Service Type allow you to specify what kind of service you want.
 # Possible values for ServiceType are:
