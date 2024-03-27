@@ -1,11 +1,17 @@
 name: bgdemo
 replicas: 2
 
-image:  <+artifact.primary.image>
+image: ${artifact.metadata.image}
 dockercfg: ${artifact.source.dockerconfig}
 
 createNamespace: true
-namespace: <+serviceVariables.namespace>
+namespace: ${serviceVariable.namespace}
+
+# image:  <+artifact.primary.image>
+# dockercfg: ${artifact.source.dockerconfig}
+
+# createNamespace: true
+# namespace: <+serviceVariables.namespace>
 
 # image: <+artifact.primary.image>
 # dockercfg: <+artifact.primary.imagePullSecrets>
