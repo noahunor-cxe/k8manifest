@@ -8,7 +8,7 @@ replicas: 2
 # namespace: ${serviceVariable.namespace}
 
 image: <+artifact.image>
-dockercfg: <+artifact.imagePullSecrets>
+dockercfg: <+artifact.imagePullSecret>
 
 createNamespace: true
 namespace: <+infra.namespace>
